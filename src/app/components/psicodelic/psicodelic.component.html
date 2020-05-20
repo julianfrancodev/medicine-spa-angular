@@ -1,0 +1,24 @@
+<div class="animated fadeIn fast">
+<h1> {{psicodelic.nombre | uppercase}} <small> {{psicodelic.aparicion | date:'y'}} </small></h1>
+
+<hr>
+
+<div class="row">
+
+    <div class="col-md-4">
+        <img src="{{psicodelic.img}}" class="img-fluid" alt=""/>
+        <br>
+        <br>
+        <a [routerLink]="['/psicodelics']" routerLinkActive="router-link-active"  class="btn btn-outline-danger btn-block">Regresar</a>
+
+    </div>
+    <div class="col-md-8">
+        <h3> {{psicodelic.nombre}} </h3>
+        <hr>
+        <p> {{psicodelic.bio}} </p>
+        <div>
+            <img class="img-logo" src="{{getImage(psicodelic.casa)}}" alt=""/>
+        </div>
+    </div>
+</div>
+</div>
