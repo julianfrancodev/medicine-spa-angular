@@ -20,7 +20,7 @@ export class PsicodelicsComponent implements OnInit {
   }
 
   showPsico(i:number){
-    this. router.navigate(['/psicodelic',i]);
+    this.router.navigate(['/psicodelic',i]);
   }
 
   

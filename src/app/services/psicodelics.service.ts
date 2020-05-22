@@ -54,6 +54,7 @@ export class PsicodelicsService {
         }
       ]
     
+    //   AQUI SE HACE TODAS LA OPERACIONES CRUD O DE MODIFICACION DE INFORMACION EN LOS RESPECTIVOS DATOS.
       constructor() { }
 
       getPsicodelics (){
@@ -64,6 +65,19 @@ export class PsicodelicsService {
         return this.psicodelics[id];
       }
     
+      findPsicodelic(findSentence:string){
+          findSentence = findSentence.toLowerCase();
+          let psicoArr: Psicodelic[] = [];
+
+          for (let psico of this.psicodelics){
+              let name = psico.nombre.toLowerCase();
+              if(name.indexOf(findSentence) >= 0 ){
+                  psicoArr.push(psico);
+              }
+          }
+
+          return psicoArr;
+      }
 }
 
 

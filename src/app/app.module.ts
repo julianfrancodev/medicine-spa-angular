@@ -17,6 +17,8 @@ import { HomeComponent } from './components/home/home.component';
 import { AboutComponent } from './components/about/about.component';
 import { PsicodelicsComponent } from './components/psicodelics/psicodelics.component';
 import { PsicodelicComponent } from './components/psicodelic/psicodelic.component';
+import { SearchComponent } from './components/search/search.component';
+import { CardPsicoComponent } from './components/card-psico/card-psico.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +27,9 @@ import { PsicodelicComponent } from './components/psicodelic/psicodelic.componen
     HomeComponent,
     AboutComponent,
     PsicodelicsComponent,
-    PsicodelicComponent
+    PsicodelicComponent,
+    SearchComponent,
+    CardPsicoComponent
   ],
   imports: [
     BrowserModule,
