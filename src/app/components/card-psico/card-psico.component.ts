@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,Input } from '@angular/core';
 
 @Component({
   selector: 'app-card-psico',
@@ -7,9 +7,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CardPsicoComponent implements OnInit {
 
+  @Input() psicodelic : any = {};
+  @Input() index:number;
+
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  showPsico(){
+    
   }
 
 }
