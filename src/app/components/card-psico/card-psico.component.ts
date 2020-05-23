@@ -1,4 +1,5 @@
 import { Component, OnInit,Input } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-card-psico',
@@ -10,12 +11,13 @@ export class CardPsicoComponent implements OnInit {
   @Input() psicodelic : any = {};
   @Input() index:number;
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
   }
 
   showPsico(){
+    this.router.navigate(['/psicodelic',this.index]);
     
   }
 

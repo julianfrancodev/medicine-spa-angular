@@ -1,20 +1,6 @@
-<div class="animated fadeIn fast">
+<div class="card-columns animated fadeIn fast">
 
-    <div *ngFor="let psicodelic of psicodelics" class="row" style="margin-top: 40px;">
-        <div class="col-md-4">
-            <img src="{{psicodelic.img}}" class="img-fluid" alt="" />
-            <br>
-            <br>
-            <a [routerLink]="['/psicodelics']" routerLinkActive="router-link-active"
-                class="btn btn-outline-danger btn-block">Regresar</a>
-
-        </div>
-        <div class="col-md-8">
-            <h3> {{psicodelic.nombre | uppercase}} </h3>
-            <hr>
-            <p> {{psicodelic.bio}} </p>
-        </div>
-    </div>
+    <app-card-psico [psicodelic]="psicodelic" [index]="i" *ngFor="let psicodelic of psicodelics; let i = index;"  ></app-card-psico>
 
     <div *ngIf="psicodelics.length == 0" class="alert alert-warning" role="alert">
         Lo siento no lo encontramos...
